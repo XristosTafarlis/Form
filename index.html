@@ -11,7 +11,7 @@
 			align-items: center;
 			height: 100vh;
 			margin: 0px;
-			background-color: #1b1b1b;
+			background-color: #585858;
 			box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5) inset;
 		}
 		label {
@@ -19,7 +19,7 @@
 			margin-bottom: 5px;
 		}
 		.box{
-			color: rgb(212, 212, 212);
+			color: rgb(180, 180, 180);
 			border: 1px solid rgb(0, 0, 0);
 			font-family: Verdana,Geneva,sans-serif; 
 			border-radius: 10px;
@@ -30,9 +30,13 @@
 			height: 270px;
 		}
 		.title{
-			text-align: center;
+			display: inline-block;
 			font-size: 34px;
-			padding-bottom: 30px;
+			margin-bottom: 20px;
+			/* padding-right: 10px;
+			padding-left: 10px; */
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 		#email{
 			font-size: 18px;
@@ -54,9 +58,26 @@
 			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 		}
 		.input:focus {
-			border-bottom: 2px solid rgb(16, 47, 114); /* Highlight underline on focus */
+			border-bottom: 2px solid rgb(16, 47, 114);
 		}
-		
+		.button {
+			float: right;
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border: 1px solid rgb(16, 47, 114);
+			border-radius: 14px;
+			outline: none;
+			background-color: #464646;
+			font-size: 20px;
+			font-weight: bold;
+			color: rgb(16, 47, 114);
+		}
+		.button:hover{
+			background-color: #3b3b3b;
+			color: rgb(16, 47, 114);
+		}
 	</style>
 	<script>
 		// JavaScript
@@ -67,13 +88,13 @@
 	<!-- HTML -->
 	<div class="box">
 		<div>
-			<div class="title">Log in / Sign up</div>
+			<div class="title">Log in</div>
 			<label id = "email">Email</label>
 			<input class = "input" type = "email"></input>
 			<label id = "password">Password</label>
 			<input class = "input" type = "password"></input>
 		</div>
-		<button type="submit">Submit</button>
+		<button class="button" type="submit">Submit</button>
 	</div>
 </body>
 
