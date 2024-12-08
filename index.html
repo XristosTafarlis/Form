@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Super Title</title>
+	<meta charset="UTF-8" />
+	<style>
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0px;
+			background-color: #1b1b1b;
+			box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5) inset;
+		}
+		label {
+			display: flex;
+			margin-bottom: 5px;
+		}
+		.box{
+			color: rgb(212, 212, 212);
+			border: 1px solid rgb(0, 0, 0);
+			font-family: Verdana,Geneva,sans-serif; 
+			border-radius: 10px;
+			background-color: rgb(37, 37, 37);
+			padding: 30px;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+			width: 300px;
+			height: 270px;
+		}
+		.title{
+			text-align: center;
+			font-size: 34px;
+			padding-bottom: 30px;
+		}
+		#email{
+			font-size: 18px;
+			padding-bottom: 5px;
+		}
+		#password{
+			font-size: 18px;
+			padding-bottom: 5px;
+		}
+		.input{
+			width: 100%;
+			outline: none;
+			border: 1px solid rgb(45, 45, 45);
+			border-radius: 20px;
+			padding: 5px;
+			color: #727272;
+			background-color: rgb(45, 45, 45);
+			margin-bottom: 25px;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+		}
+		.input:focus {
+			border-bottom: 2px solid rgb(16, 47, 114); /* Highlight underline on focus */
+		}
+		
+	</style>
+	<script>
+		// JavaScript
+	</script>
+</head>
+
+<body>
+	<!-- HTML -->
+	<div class="box">
+		<div>
+			<div class="title">Log in / Sign up</div>
+			<label id = "email">Email</label>
+			<input class = "input" type = "email"></input>
+			<label id = "password">Password</label>
+			<input class = "input" type = "password"></input>
+		</div>
+		<button type="submit">Submit</button>
+	</div>
+</body>
+
+</html>
