@@ -1,0 +1,79 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0px;
+	background-image: url('BG.png');
+	background-size: cover;
+	background-color: rgb(22, 22, 22);
+	/* box-shadow: 0px 0px 100px rgb(0, 0, 0) inset; */
+}
+label {
+	display: flex;
+	margin-bottom: 5px;
+}
+.box{
+	color: rgb(180, 180, 180);
+	border: 1px solid rgba(37, 37, 37, 0.5);
+	font-family: Verdana,Geneva,sans-serif; 
+	border-radius: 10px;
+	background-color: rgba(37, 37, 37, 0.5);
+	padding: 30px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	width: 300px;
+	height: 270px;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+#title{
+	display: inline-block;
+	font-size: 34px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#email{
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+#password{
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+.input{
+	width: 100%;
+	outline: none;
+	border: 2px solid #727272;
+	border-radius: 20px;
+	padding: 5px;
+	color: #727272;
+	background-color: rgba(37, 37, 37, 0.5);
+	margin-bottom: 25px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.input:focus {
+	border-bottom: 2px solid rgb(24, 137, 230);
+}
+.button {
+	float: right;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid rgb(24, 137, 230);
+	border-radius: 14px;
+	outline: none;
+	background-color: inherit;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(24, 137, 230);
+}
+.button:hover{
+	background-color: rgb(24, 137, 230);
+	color: rgb(180, 180, 180);
+}
+.button:focus {
+	background-color: rgb(24, 137, 230);
+	color: rgb(180, 180, 180);
+}
