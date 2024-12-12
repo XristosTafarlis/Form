@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="box">
+		<h1>Welcome, <span id="username"></span>!</h1>
+	</div>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const username = urlParams.get('username');
+		document.getElementById('username').textContent = username;
+	</script>
+	
+</body>
+</html>

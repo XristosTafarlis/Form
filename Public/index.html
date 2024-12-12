@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Log in</title>
+	<script>
+	function SubmitClick() {
+		const email = document.getElementById("email_inp").value;
+		const password = document.getElementById("password_inp").value;
+	
+		fetch('/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ email, password }),
+		})
+		.then(response => response.json())
+		.then(data => {
+			if (data.success) {
+				console.log("Login successful");
+				console.log("Username received:", data.username); // Add this line for debugging
+				window.location.href = `/welcome.html?username=${encodeURIComponent(data.username)}`;
+			} else {
+				console.log("Login failed: " + data.message);
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+		});
+	}
+		function checkEnterKey(event) {
+			if (event.key === "Enter") {
+				SubmitClick();
+			}
+		}
+		window.onload = function() {
+			document.getElementById("email_inp").addEventListener("keydown", checkEnterKey);
+			document.getElementById("password_inp").addEventListener("keydown", checkEnterKey);
+		};
+	</script>
+</head>
+
+<body>
+	<!-- HTML -->
+	<div class="box">
+		<div>
+			<div id = "title">Log in</div>
+			<label id = "email">Email</label>
+			<input class = "input" id = "email_inp" type = "email"></input>
+			<label id = "password">Password</label>
+			<input class = "input" id = "password_inp" type = "password"></input>
+		</div>
+		<button class="button" onclick = "SubmitClick()"type="submit">Submit</button>
+	</div>
+</body>
+
+</html>
