@@ -1,1 +1,1 @@
-Small full stack project
+Small full stack project with SQLite
